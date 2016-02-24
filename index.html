@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html ng-app="spotifyplayer">
+  <head>
+    <title>Spotify</title>
+    <meta charset="utf-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-resource.min.js"></script>
+    <script src="/app/app.js"></script>
+    <style>
+      .song{
+        display:block;
+        border-bottom:1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+        <spotify-player></spotify-player>
+
+        <div>
+          <form ng-submit="spotify.doPlay()">
+            <input ng-model="youtube.video_name">
+            <button>BUSCAR YOUTUBE</button>
+          </form>
+        </div>
+
+        <youtube-player id="'-FRgkJWR2W8'"></youtube-player>
+
+  </body>
+</html>

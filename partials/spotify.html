@@ -1,0 +1,26 @@
+<div>
+	<form ng-submit="spotify.doSearch()">
+		<input ng-model="spotify.song_name">
+		<button>BUSCAR SPOTIFY</button>
+	</form>
+
+	<div>
+		<a ng-click="spotify.play(song)" ng-repeat="song in spotify.playlist" class="song">
+			<span class="title">{{song.name}}</span>
+			<span>{{song.duration_ms}}</span>
+			<span>{{song.artist[0].name}}</span>
+		</a>
+	</div>
+
+	<div class="song-detail">
+		<div class="header">
+			<img ng-src="{{spotify.song.album.images[1].url}}"/>
+			<span class="title">{{spotify.song.name}}</span>
+			<span>Duration: {{spotify.song.duration_ms}}</span>
+			<span>Popularity: {{spotify.song.popularity}}</span>
+			<span>Album: {{spotify.song.album.name}}</span>
+			<span>{{spotify.song.artists[0].name}}</span>
+			<a target="_black" ng-href="{{spotify.song.external_urls.spotify}}">ARIR EN SPOTIFY</a>
+		</div>
+	</div>
+</div>
